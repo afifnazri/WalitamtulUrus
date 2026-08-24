@@ -54,6 +54,8 @@ body { background: #f9f6f1; font-family: 'Lato', sans-serif; color: #2c2418; }
     position: relative;
     display: flex;
     flex-direction: column;
+    z-index: 1;
+
     /* overflow: hidden;  */
 
 }
@@ -142,7 +144,6 @@ pointer-events: none;
     letter-spacing: 0.08em; cursor: pointer; text-decoration: none;
     display: flex; align-items: center; justify-content: center;
     gap: 7px; transition: opacity 0.15s;
-
     line-height: normal;
     appearance: none;
     -webkit-appearance: none;
@@ -227,7 +228,7 @@ pointer-events: none;
 
 .scroll-hint {
     position: absolute; 
-    bottom: -30px;
+    bottom: -40px;
     left: 50%; 
     transform: translateX(-50%);
     display: flex; 
@@ -238,7 +239,11 @@ pointer-events: none;
     animation: bounce 2s infinite;
 }
 
-.scroll-hint span { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8B6F47; }
+.scroll-hint span { 
+    font-size: 12px; 
+    letter-spacing: 
+    0.12em; text-transform: uppercase; 
+    color: #8B6F47; }
 @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50%       { transform: translateX(-50%) translateY(6px); }
