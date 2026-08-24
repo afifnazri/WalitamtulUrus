@@ -17,6 +17,27 @@ body { background: #f9f6f1; font-family: 'Lato', sans-serif; color: #2c2418; }
     background: #fff; 
 }
 
+.section-alt::before {
+  content: ''; 
+  position: absolute; 
+  top: 0; left: 0; right: 0; 
+  height: 80px; 
+  background: linear-gradient(to bottom, #f9f6f1, #fff);
+  z-index: 0; 
+  pointer-events: none;
+}
+
+.section-alt::after {
+  content: ''; 
+  position: absolute; 
+  bottom: 0; left: 0; right: 0; 
+  height: 80px; 
+  background: linear-gradient(to top, #f9f6f1, #fff);
+  z-index: 0; 
+  pointer-events: none;
+}
+
+
 .card {
 
     width: 100%; 
@@ -70,6 +91,9 @@ pointer-events: none;
     font-size: 22px; font-weight: 300; font-style: italic;
     color: #8B6F47; margin-bottom: 1.6rem;
 }
+
+
+
 .names {
     font-family: 'Cormorant Garamond', serif;
     font-size: 44px; font-weight: 300; font-style: italic;
@@ -111,12 +135,18 @@ pointer-events: none;
 }
 
 .btn-row { display: flex; gap: 10px; margin-top: 1.8rem; }
+
 .btn {
     flex: 1; padding: 11px 0; border-radius: 8px;
     font-size: 13px; font-family: 'Lato', sans-serif; font-weight: 400;
     letter-spacing: 0.08em; cursor: pointer; text-decoration: none;
     display: flex; align-items: center; justify-content: center;
     gap: 7px; transition: opacity 0.15s;
+
+    line-height: normal;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box
 }
 .btn-outline { background: transparent; color: #8B6F47; border: 1px solid #8B6F47; }
 .btn-fill    { background: #8B6F47; color: #ffffff; border: none; }
