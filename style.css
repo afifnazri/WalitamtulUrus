@@ -3,6 +3,8 @@ html { scroll-behavior: smooth; }
 body { background: #f9f6f1; font-family: 'Lato', sans-serif; color: #2c2418; }
 
 .section {
+    /* min-height: 640px; */
+  
     min-height: 100vh;
     /* height: 100vh;
     overflow: hidden; */
@@ -77,13 +79,17 @@ opacity: 0.35;
 pointer-events: none;
 }
 
-.corner-tl, .corner-tr, .corner-bl, .corner-br {
-    position: absolute; width: 36px; height: 36px; opacity: 0.35;
+#door-overlay > div::before {
+content: '';
+position: absolute;
+top: 14px;
+left: 14px;
+right: 14px;
+bottom: 14px;
+border: 1px solid rgba(255,255,255,0.35);
+border-radius: 8px;
+pointer-events: none;
 }
-.corner-tl { top:14px; left:14px;   border-top:1px solid #8B6F47; border-left:1px solid #8B6F47;   border-radius:4px 0 0 0; }
-.corner-tr { top:14px; right:14px;  border-top:1px solid #8B6F47; border-right:1px solid #8B6F47;  border-radius:0 4px 0 0; }
-.corner-bl { bottom:14px; left:14px;  border-bottom:1px solid #8B6F47; border-left:1px solid #8B6F47;  border-radius:0 0 0 4px; }
-.corner-br { bottom:14px; right:14px; border-bottom:1px solid #8B6F47; border-right:1px solid #8B6F47; border-radius:0 0 4px 0; }
 
 .eyebrow {
     font-size: 11px; font-weight: 300; letter-spacing: 0.22em;
@@ -239,6 +245,7 @@ pointer-events: none;
     gap: 4px;
     opacity: 0.5; 
     animation: bounce 2s infinite;
+    cursor: pointer;
 }
 
 .scroll-hint span { 
